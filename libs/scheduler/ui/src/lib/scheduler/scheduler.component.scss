@@ -1,0 +1,159 @@
+.mave-scheduler-wrapper > *{
+  font-family: -apple-system,Segoe UI,Roboto,sans-serif;
+  font-weight: 400;
+}
+
+.mave-scheduler-wrapper{
+  background: #ffffff;
+  overflow: hidden;
+  flex: 1 1 auto;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  height:100%;
+}
+
+.mave-scheduler-sidebar{
+  width: 20%;
+}
+
+.mave-scheduler-holder{
+  display: flex;
+  position: relative;
+  flex-direction: row;
+  width: 90%;
+}
+
+.mave-scheduler-sidebar-container{
+  background: #f7f7f7;
+  border-color: #ccc;
+  position: relative;
+  will-change: opacity;
+  z-index: 1;
+  box-sizing: border-box;
+  height: 100%;
+  width: 100%;
+}
+
+.side-bar-button{
+  background: transparent;
+  border: none;
+  left:80%;
+  position:relative;
+}
+
+.mave-scheduler-holder-header{
+  width: 100%;
+  height: 4em;
+  background: #d4e2e6;
+  text-align: center;
+}
+
+/*.mave-scheduler-slot-offset-div{
+  width: 100%;
+  height: 4em;
+  box-sizing: border-box;
+  background: #d4e2e6;
+}*/
+
+.mave-scheduler-time-container-col{
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  width: 9%;
+  flex: 0 1 auto;
+  position: relative;
+  top:4em;
+}
+
+.mave-scheduler-time-container-col-header{
+  background: #f7f7f7;
+  border-color: #ccc;
+  will-change: opacity;
+  z-index: 1;
+  box-sizing: border-box;
+  min-height: 4em;
+  min-width: 100%;
+}
+
+.mave-scheduler-time-allday{
+  box-sizing: border-box;
+  color: #8c8c8c;
+  direction: ltr;
+  height: 4em;
+  width: 100%;
+  padding: 1.5em 0.66667em;
+  pointer-events: auto;
+  text-align: right;
+}
+
+.mave-scheduler-time{
+  box-sizing: border-box;
+  color: #8c8c8c;
+  direction: ltr;
+  height: 4em;
+  width: 100%;
+  padding: 0.5em 0.66667em;
+  pointer-events: auto;
+  text-align: right;
+}
+
+.mave-scheduler-slot-container-col{
+  display: flex;
+  box-sizing: border-box;
+  height: 100%;
+  width: 100%;
+  z-index: 0;
+  flex-direction: column;
+  flex:1 1 auto;
+}
+
+.mave-scheduler-events-wrapper{
+  display: flex;
+  box-sizing: border-box;
+  width: 100%;
+  z-index: 3;
+  flex-direction: column;
+  flex:1 1 auto;
+}
+
+.mave-scheduler-event-grouper{
+  width: 90%;
+  position: absolute;
+  z-index: 0;
+}
+
+.mave-scheduler-event{
+  box-sizing: border-box;
+  height: 100%;
+  z-index: 3;
+  position: absolute;
+  display: flex;
+}
+
+.event-border-touch{
+  width: 4px;
+}
+
+.event-holder{
+  width: 100%;
+  color: rgba(0, 0, 0, 1);
+}
+.mave-scheduler-slot-allday{
+  border-top: 0.05em solid #8c8c8c;
+  height: 4em;
+  box-sizing: border-box;
+  position: relative;
+  flex: 1 1 auto;
+}
+
+.mave-scheduler-slot{
+  border-top: 0.05em solid #8c8c8c;
+  height: 4em;
+  box-sizing: border-box;
+  position: relative;
+  flex: 1 1 auto;
+}
+
+
+

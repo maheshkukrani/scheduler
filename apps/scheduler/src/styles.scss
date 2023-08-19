@@ -1,0 +1,7 @@
+/* You can add global styles to this file, and also import other style files */
+/* Add application styles & imports to this file! */
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+table:not(.ma) {
+  table-layout: fixed !important;
+  width: 100% !important;
+}

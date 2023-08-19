@@ -1,0 +1,60 @@
+<div class="mave-scheduler-wrapper">
+  <div class="mave-scheduler-sidebar" *ngIf="!mobileView">
+    <div class="mave-scheduler-sidebar-container">
+      <!--      <div class="collapse button">
+              <button class="side-bar-button" aria-expanded="true" aria-label="Collapse sidebar" type="button">
+                <img style="height: 25px;width: 25px;" src="../assets/collapse-back.svg">
+              </button>
+            </div>-->
+      <div class="calendar-holder">
+        <mat-card class="inline-calendar-card">
+          <mat-calendar></mat-calendar>
+        </mat-card>
+      </div>
+    </div>
+  </div>
+  <mat-datepicker #picker></mat-datepicker>
+  <div class="mave-scheduler-mobile-view-date-picker" *ngIf="mobileView">
+    <a href="">{{TODAY.toLocaleString(locale,options)}}</a>
+  </div>
+
+  <div class="mave-scheduler-holder">
+    <div class="mave-scheduler-time-container-col">
+      <div class="mave-scheduler-slot-offset-div"></div>
+
+      <div class="mave-scheduler-time-allday">{{allDay}}</div>
+      <div class="mave-scheduler-time" *ngFor="let interval of intervals">{{interval}}
+      </div>
+    </div>
+    <div class="mave-scheduler-slot-container-col">
+      <div class="mave-scheduler-holder-header">{{column.name}}</div>
+      <div class="mave-scheduler-events-wrapper">
+        <ng-container class="mave-scheduler-event-grouper" *ngFor="let group of this.groupEvents;">
+          <!--          [style.top]="getOffsetString(group.offset)"
+                    [style.height]="getGroupHeight(group)"-->
+
+          <div class="mave-scheduler-event" draggable="true" (dragstart)="eventDrag($event,event.originalIndex)"
+               [id]="event.originalIndex"
+               *ngFor="let event of group.events; let i = index;"
+               [style.top]="getOffsetString(event.offset,group.offset)"
+               [style.height]="getEventHeight(event.length)"
+               [style.width]="getWidth(group.events?.length)"
+               [style.left]="getLeft(group.events?.length,i)"
+               (dragover)="allowDrop($event)"
+               (drop)="dropOnEvent($event,event.startTime)"
+          >
+            <div class="event-border-touch" [style.background]="getTouchColor(event.priority)"></div>
+            <div class="event-holder" [style.background]="getColor(event.priority)">{{event.title}}</div>
+          </div>
+        </ng-container>
+      </div>
+      <div class="mave-scheduler-slot-allday" id="all-day"></div>
+      <div class="mave-scheduler-slot"
+           (drop)="drop($event,interval)"
+           [id]="interval"
+           (dragover)="allowDrop($event)"
+           *ngFor="let interval of intervals"></div>
+    </div>
+  </div>
+</div>
+
